@@ -1,0 +1,10 @@
+﻿<Window x:Class="_2_Ziggy.Maes_I2C_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <Button Name="btnInit" Content="Init" Height="50" Margin="10" Click="btnInit_Click"></Button>
+        <Button Name="btnZend" Content="Zend" Height="50" Margin="10" Click="btnZend_Click"></Button>
+        <TextBox Name="txtData" Height="50" Margin="10"></TextBox>
+    </StackPanel>
+</Window>
