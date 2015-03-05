@@ -71,5 +71,15 @@ namespace _02_Ziggy.Maes_Analoog
             bw.RunWorkerAsync();
         }
 
+        private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            MPUSB.WriteAnalogOut(0, (short)slider1.Value);
+        }
+
+        private void slider2_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            MPUSB.WriteAnalogOut(1, (short)slider2.Value);
+        }
+
     }
 }
