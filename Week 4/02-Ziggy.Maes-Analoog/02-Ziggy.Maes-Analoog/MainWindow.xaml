@@ -10,6 +10,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
@@ -23,6 +24,7 @@
         <Label Content="Lichtsensor:" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" />
         <Label Content="LED 1:" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" />
         <Label Content="LED 2" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <Label Content="Geluid:" Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" />
             
         <ProgressBar Name="bar1" Grid.Column="1" Grid.Row="0" Margin="1" Grid.ColumnSpan="3" Maximum="1024"/>
         <ProgressBar Name="bar2" Grid.Column="1" Grid.Row="1" Margin="1" Grid.ColumnSpan="3" Maximum="1024" />
@@ -32,5 +34,7 @@
         
         <Slider Name="slider1" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="5" VerticalAlignment="Center" ValueChanged="slider1_ValueChanged" Maximum="1023" />
         <Slider Name="slider2" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Margin="5" VerticalAlignment="Center" ValueChanged="slider2_ValueChanged" Maximum="1023" />
+        
+        <Button Name="btnSound" Content="Speel Broeder Jacob"  Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Margin="5" Click="btnSound_Click" />
     </Grid>
 </Window>

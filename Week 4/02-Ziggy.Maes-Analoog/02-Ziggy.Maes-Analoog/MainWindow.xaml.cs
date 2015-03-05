@@ -64,6 +64,36 @@ namespace _02_Ziggy.Maes_Analoog
             Console.WriteLine(valbar4);
             bar4.Value = valbar4;
 
+            int getal = 0;
+            int deling = 1024 / 6;
+
+            if (valbar4 > deling * 1)
+            {
+                getal = 63;
+            }
+            if (valbar4 > deling * 2)
+            {
+                getal = 31;
+            }
+            if (valbar4 > deling * 3)
+            {
+                getal = 15;
+            }
+            if (valbar4 > deling * 4)
+            {
+                getal = 7;
+            }
+            if (valbar4 > deling * 5)
+            {
+                getal = 3;
+            }
+            if (valbar4 > deling * 6)
+            {
+                getal = 1;
+            }
+
+            MPUSB.WriteDigitalOutPortD((short)getal);
+
         }
 
         private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -79,6 +109,22 @@ namespace _02_Ziggy.Maes_Analoog
         private void slider2_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             MPUSB.WriteAnalogOut(1, (short)slider2.Value);
+        }
+
+        private void btnSound_Click(object sender, RoutedEventArgs e)
+        {   
+            MPUSB.WriteAnalogOut(0, (short)16);
+            MPUSB.Wait(500);
+            MPUSB.WriteAnalogOut(0, (short)36);
+            MPUSB.Wait(500);
+            MPUSB.WriteAnalogOut(0, (short)81);
+            MPUSB.Wait(500);
+            MPUSB.WriteAnalogOut(0, (short)16);
+            MPUSB.Wait(500);
+            MPUSB.WriteAnalogOut(0, (short)36);
+            MPUSB.Wait(500);
+            MPUSB.WriteAnalogOut(0, (short)81);
+            MPUSB.Wait(500);
         }
 
     }
