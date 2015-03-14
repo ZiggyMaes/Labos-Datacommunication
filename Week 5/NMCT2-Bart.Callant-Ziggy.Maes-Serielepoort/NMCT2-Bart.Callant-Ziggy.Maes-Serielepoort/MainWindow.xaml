@@ -1,0 +1,28 @@
+﻿<Window x:Class="NMCT2_Bart.Callant_Ziggy.Maes_Serielepoort.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition /> 
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <ComboBox Name="cboCOM" SelectionChanged="cboCOM_SelectionChanged" />
+        
+        <GroupBox Grid.Row="1">
+            <StackPanel>
+                <RadioButton Name="ReadExisting" Content="ReadExisting()" Checked="ReadExisting_Checked" />
+                <RadioButton Name="Read" Content="Read()" Checked="Read_Checked" />
+                <RadioButton Name="DataRecieved" Content="DataRecieved()" Checked="DataRecieved_Checked" />
+            </StackPanel>
+        </GroupBox>
+        
+        <TextBox Grid.Row="2" Name="txtReadExisting" />
+        <TextBox Grid.Row="3" Name="txtRead" />
+        <TextBox Grid.Row="4" Name="txtDataRecieved" />
+    </Grid>
+</Window>
